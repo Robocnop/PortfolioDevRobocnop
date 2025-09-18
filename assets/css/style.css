@@ -1,0 +1,191 @@
+:root{
+  /* Palette par défaut (dark) */
+  --bg-0:#0b0f14; --bg-1:#0f1520; --bg-2:#121a27;
+  --txt-1:#e6edf3; --txt-2:#9fb0c3;
+  --acc-1:#5dd8ff; --acc-2:#6ee7b7;
+  --muted:#243447; --radius:16px;
+  --shadow: 0 10px 30px rgba(0,0,0,0.45);
+  --font-sans:"Inter",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  --font-mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+  --max:1120px;
+}
+
+/* Si l'utilisateur préfère le mode clair et qu'on est en "auto" (pas de data-theme) */
+@media (prefers-color-scheme: light){
+  :root{
+    --bg-0:#f6f7f9; --bg-1:#ffffff; --bg-2:#f2f5f9;
+    --txt-1:#0c1724; --txt-2:#425469; --muted:#dbe2ea;
+    --shadow:0 10px 30px rgba(13,31,53,0.08);
+  }
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+
+/* Fond uni + dégradés radiaux sur un pseudo-élément pour éviter les “coupures” */
+body{
+  margin:0;
+  font-family:var(--font-sans);
+  color:var(--txt-1);
+  background: var(--bg-0); /* les radials sont portés par html::before */
+  line-height:1.6;
+}
+html::before{
+  content:"";
+  position:fixed;
+  inset:-25vh -25vw;          /* dépasse l’écran => pas de bord visible */
+  z-index:-1;
+  pointer-events:none;
+  background:
+    radial-gradient(2000px 1400px at 10% -20%, rgba(93,216,255,0.12), transparent 70%),
+    radial-gradient(1600px 1200px at 110% 0%, rgba(110,231,183,0.10), transparent 70%);
+}
+
+.wrap{max-width:var(--max); margin-inline:auto; padding:0 20px}
+
+/* Header */
+.site-header{
+  position:sticky; top:0; z-index:50;
+  backdrop-filter:saturate(180%) blur(10px);
+  background: color-mix(in oklab, var(--bg-1) 85%, transparent);
+  border-bottom:1px solid color-mix(in oklab, var(--muted) 60%, transparent);
+}
+.nav{ display:flex; align-items:center; justify-content:space-between; min-height:64px; }
+.brand{ display:flex; gap:12px; align-items:center }
+.brand img{ height:40px; width:40px; border-radius:10px }
+.brand strong{ font-weight:700; letter-spacing:.2px }
+#main-nav a{
+  text-decoration:none; color:var(--txt-2); font-weight:600; padding:10px 12px; border-radius:10px;
+}
+#main-nav a[aria-current="page"], #main-nav a:hover{
+  color:var(--txt-1);
+  background: linear-gradient(90deg, color-mix(in oklab, var(--acc-1) 22%, transparent), color-mix(in oklab, var(--acc-2) 22%, transparent));
+  outline:1px solid color-mix(in oklab, var(--acc-1) 30%, var(--bg-2));
+}
+
+.btn{
+  line-height:1.15;               /* centrage vertical propre */
+  font-weight:600; padding:10px 12px; border-radius:10px;
+  border:1px solid var(--muted); background:transparent; color:var(--txt-1); cursor:pointer;
+}
+.btn.primary{ background: linear-gradient(90deg, var(--acc-1), var(--acc-2)); color:#001018; border:none }
+.btn.ghost{ background:transparent; border:1px solid var(--muted) }
+
+/* Hero */
+.hero{ padding:64px 0 32px }
+.hero-grid{ display:grid; grid-template-columns:1.2fr .8fr; gap:32px; align-items:center }
+.kicker{ font-size:.9rem; text-transform:uppercase; letter-spacing:.18em; color:var(--acc-1); font-weight:700 }
+h1{ font-size:clamp(28px, 4.2vw, 48px); line-height:1.15; margin:.3em 0 .2em }
+.lead{ font-size:clamp(16px, 2.1vw, 19px); color:var(--txt-2) }
+.mono-chip{
+  font-family:var(--font-mono); font-size:.92rem; display:inline-flex; gap:10px; align-items:center;
+  padding:10px 12px; border:1px dashed var(--muted); border-radius:12px;
+  background:color-mix(in oklab, var(--bg-2) 70%, transparent)
+}
+.hero-card{
+  background: linear-gradient(180deg, color-mix(in oklab, var(--bg-1) 85%, transparent), color-mix(in oklab, var(--bg-2) 85%, transparent));
+  border:1px solid var(--muted); border-radius:var(--radius); padding:20px; box-shadow:var(--shadow);
+}
+
+/* Sections */
+section{ padding:48px 0 }
+section h2{ font-size:clamp(22px, 2.8vw, 32px); margin:0 0 16px }
+.section-lead{ color:var(--txt-2); max-width:70ch }
+.muted{ color:var(--txt-2) }
+
+/* Projets */
+.grid{ display:grid; grid-template-columns:repeat(12,1fr); gap:20px }
+.card{
+  grid-column: span 6; padding:20px; border-radius:var(--radius);
+  border:1px solid var(--muted);
+  background: linear-gradient(180deg, color-mix(in oklab, var(--bg-1) 85%, transparent), color-mix(in oklab, var(--bg-2) 85%, transparent));
+  box-shadow: var(--shadow);
+  transition: transform .28s ease, outline-color .28s ease; outline:1px solid transparent;
+}
+.card:hover{ transform: translateY(-4px); outline-color: color-mix(in oklab, var(--acc-1) 40%, var(--bg-2)); }
+.card h3{ margin:0 0 6px; font-size:18px }
+.card p{ margin:0 0 12px }
+.tags{ display:flex; flex-wrap:wrap; gap:8px; margin-top:10px }
+.tag{ font-family:var(--font-mono); font-size:.78rem; border:1px solid var(--muted); padding:6px 8px; border-radius:999px }
+.actions{ display:flex; gap:10px; align-items:center; margin-top:16px } /* espace sous les tags */
+
+/* Filtres */
+.filters{ display:flex; gap:8px; flex-wrap:wrap; margin-bottom:14px }
+.chip{ border:1px solid var(--muted); background:transparent; color:var(--txt-1); border-radius:999px; padding:6px 10px; cursor:pointer; font-weight:600 }
+.chip.is-active{ background:linear-gradient(90deg, var(--acc-1), var(--acc-2)); color:#001018; border:none }
+
+/* Contact + footer */
+form{ max-width:680px; display:grid; gap:12px }
+label{ font-weight:600 }
+input, textarea{ width:100%; padding:12px 14px; border-radius:10px; border:1px solid var(--muted); background:var(--bg-1); color:var(--txt-1) }
+textarea{ min-height:140px }
+footer{ border-top:1px solid var(--muted); padding:32px 0; color:var(--txt-2) }
+
+/* Animations */
+.reveal{ opacity:0; transform:translateY(14px) }
+.reveal.is-in{ opacity:1; transform:none; transition:opacity .6s ease, transform .6s ease }
+.copy-feedback{ min-height:1.4em; margin-top:6px; color:var(--acc-2); font-weight:600 }
+
+/* Responsive */
+@media (max-width: 960px){ .hero-grid{ grid-template-columns:1fr } }
+@media (max-width: 720px){ .card{ grid-column: span 12 } }
+
+/* ——— Forçage de thème par data-attr (prioritaire sur le media query) ——— */
+:root[data-theme="dark"]{
+  --bg-0:#0b0f14; --bg-1:#0f1520; --bg-2:#121a27;
+  --txt-1:#e6edf3; --txt-2:#9fb0c3; --muted:#243447;
+  --shadow: 0 10px 30px rgba(0,0,0,0.45);
+}
+:root[data-theme="light"]{
+  --bg-0:#f6f7f9; --bg-1:#ffffff; --bg-2:#f2f5f9;
+  --txt-1:#0c1724; --txt-2:#425469; --muted:#dbe2ea;
+  --shadow:0 10px 30px rgba(13,31,53,0.08);
+}
+
+.contact-list{
+  display:grid;
+  gap:14px;
+  margin:18px 0 0;
+  padding:0;
+  list-style:none;
+}
+.contact-item{
+  display:grid;
+  grid-template-columns: 30px 120px 1fr auto;
+  align-items:center;
+  gap:12px;
+  padding:14px 16px;
+  border:1px solid var(--muted);
+  border-radius:var(--radius);
+  background: linear-gradient(180deg,
+    color-mix(in oklab, var(--bg-1) 85%, transparent),
+    color-mix(in oklab, var(--bg-2) 85%, transparent));
+  box-shadow: var(--shadow);
+}
+.contact-icon{ display:grid; place-items:center }
+.contact-logo{
+  width:26px; height:26px; display:block;
+  filter: saturate(0.8) brightness(1);        /* s’adapte bien aux deux thèmes */
+}
+.contact-label{ font-weight:700; color:var(--txt-2) }
+.contact-value{
+  color:var(--txt-1);
+  text-decoration:none;
+  word-break:break-all;
+}
+.contact-actions{ display:flex; gap:10px }
+
+/* Responsive */
+@media (max-width:720px){
+  .contact-item{
+    grid-template-columns:30px 100px 1fr;
+    grid-template-areas:
+      "icon label value"
+      ".    actions actions";
+    row-gap:10px;
+  }
+  .contact-icon{ grid-area:icon }
+  .contact-label{ grid-area:label }
+  .contact-value{ grid-area:value }
+  .contact-actions{ grid-area:actions; justify-self:end }
+}

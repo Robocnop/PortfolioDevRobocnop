@@ -1,82 +1,184 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio - Robocnop</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="color-scheme" content="dark light" />
+  <title>Portfolio Robocnop — Technicien Informatique</title>
+  <meta name="description" content="Technicien en informatique" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="#accueil">Accueil</a></li>
-        <li><a href="#apropos">À propos</a></li>
-        <li><a href="#projets">Projets</a></li>
-        <li><a href="#github-stats">Stats GitHub</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="#accueil" aria-label="Accueil">
+        <img src="https://raw.githubusercontent.com/BelgiansDev/.github/refs/heads/main/images/MillieRobo.png" alt="Logo" />
+        <strong>Robocnop</strong>
+      </a>
+      <nav aria-label="Navigation principale" id="main-nav">
+        <a href="#accueil" data-nav>Accueil</a>
+        <a href="#apropos" data-nav>À propos</a>
+        <a href="#projets" data-nav>Projets</a>
+        <a href="#contact" data-nav>Contact</a>
+      </nav>
+      <button class="btn ghost" id="theme-toggle" aria-label="Basculer le thème">🌗</button>
+    </div>
   </header>
-  <img src="https://raw.githubusercontent.com/BelgiansDev/.github/refs/heads/main/images/MillieRobo.png" style="height: 100px; display=flex; position: absolute; margin-left: 80px; margin-top: 40px;" />
-  <section id="accueil">
-    <h1>Bienvenue sur mon portfolio</h1>
-    <p>Je suis Robocnop, un futur technicien en informatique passionné par tout ce qui concerne le développement de logiciels.</p>
-  </section>
 
-  <section id="apropos">
-    <h2>À propos</h2>
-    <p>Je suis un petit développeur avec de l'expérience en batchfiles, C#, Python et qui sais utiliser correctement l'IA afin d'améliorer mes projets.</p>
-  </section>
+  <main>
+    <section id="accueil" class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="kicker">Technicien IT • Réseau, scripts, assistance utilisateur, hardware</div>
+          <h1>Je suis là pour vous aider dans l’informatique au quotidien.</h1>
+          <p class="lead">Tooling Windows (batch), C# (légèrement), web, bases de données. Objectif : vous aider du mieux que je peux.</p>
+          <div class="mono-chip" style="margin-top:14px">$ whoami — robocnop@workspace</div>
+          <div class="actions" style="margin-top:14px">
+            <button class="btn" id="copy-mail" data-mail="robocnop@gmail.com" aria-label="Copier mon email">Copier mon email</button>
+            <a class="btn" href="https://github.com/Robocnop" target="_blank" rel="noreferrer">GitHub</a>
+          </div>
+          <p id="copy-feedback" class="copy-feedback" role="status" aria-live="polite"></p>
+        </div>
+        <aside class="hero-card reveal">
+          <h3 style="margin:0 0 8px">Compétences-clés</h3>
+          <ul class="muted">
+            <li>Scripts Windows (batch)</li>
+            <li>C# (.NET) — plugins & utilitaires</li>
+            <li>HTML, CSS, JS — sites web statiques</li>
+            <li>SQL — gestion de bases de données</li>
+            <li>Support utilisateur & dépannage</li>
+            <li>Montage & maintenance PC</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
 
-  <section id="projets">
-    <h2>Mes Projets</h2>
-    <div class="project">
-      <h3>SpawnProtectNotifier</h3>
-      <p>Un plugin en C# utilisant le framework Exiled qui vous avertit lorsque votre spawnprotect n'est plus actif.</p>
-      <a href="https://github.com/Robocnop/SpawnProtectNotifier">Voir sur GitHub</a>
-    </div>
-    <div class="project">
-      <h3>GeneratorLockPlugin</h3>
-      <p>Un autre plugin en C# utilisant le framework Exiled. Ce plugin permet de verrouiller les générateurs en début de partie afin de donner à 079 le temps de démarrer.</p>
-      <a href="https://github.com/Robocnop/GeneratorLockPlugin">Voir sur GitHub</a>
-    </div>
-    <div class="project">
-      <h3>AdminServicesNotifier</h3>
-      <p>Mon troisième plugin en C# utilisant le framework Modkit. Ce plugin permet d'annoncer la prise de service admin sur un serveur Nova-Life.</p>
-      <a href="https://github.com/Robocnop/AdminServicesNotifier">Voir sur GitHub</a>
-    </div>
-    <div class="project">
-      <h3>RoUtilitaire07</h3>
-      <p>Un script en batchfiles permettant d'accomplir plusieurs tâches sur Windows, comme afficher les informations principales, effectuer des pings d'adresses IP, retirer le filigrane, etc.</p>
-      <a href="https://github.com/Robocnop/RoUtilitaire07">Voir sur GitHub</a>
-    </div>
-  </section>
+    <section id="apropos">
+      <div class="wrap">
+        <h2>À propos</h2>
+        <p class="section-lead">Je conçois des utilitaires et des plugins pragmatiques et documentés. Mon approche que j'essaye de respecter : code lisible et efficacité du "produit".</p>
+      </div>
+    </section>
 
-  <section id="github-stats">
-    <h2>Mes Stats GitHub</h2>
-    <img src="https://github-readme-stats.vercel.app/api?username=Robocnop&show_icons=true&theme=radical" alt="Statistiques GitHub de Robocnop">
-    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Robocnop&layout=compact&theme=radical" alt="Langages les plus utilisés par Robocnop">
-  </section>
+    <section id="projets">
+      <div class="wrap">
+        <h2>Projets réalisés par Robocnop</h2>
 
-  <section id="contact">
-    <h2>Contactez-moi</h2>
-    <form action="mailto:robocnop@gmail.com" method="POST" enctype="text/plain">
-      <label for="name">Nom :</label>
-      <input type="text" id="name" name="name" required>
-      
-      <label for="email">Email :</label>
-      <input type="email" id="email" name="email" required>
-      
-      <label for="message">Message :</label>
-      <textarea id="message" name="message" required></textarea>
-      
-      <button type="submit">Envoyer</button>
-    </form>
-  </section>
+        <!-- Filtres (JS) -->
+        <div class="filters" role="group" aria-label="Filtrer les projets">
+          <button class="chip is-active" data-filter="all">Tout</button>
+          <button class="chip" data-filter="C#">C#</button>
+          <button class="chip" data-filter="Windows">Windows</button>
+          <!-- <button class="chip" data-filter="Python">Python</button> -->
+          <button class="chip" data-filter="Plugin">Plugin</button>
+        </div>
+
+        <div class="grid" id="project-grid">
+          <!-- Exemple de carte avec data-tags (utilisé par le filtre JS) -->
+          <article class="card reveal" data-tags="C#,Plugin" aria-labelledby="p1">
+            <h3 id="p1">SpawnProtectNotifier</h3>
+            <p class="muted">Plugin C# (Exiled) qui notifie la fin de l’invulnérabilité de spawn.</p>
+            <div class="tags">
+              <span class="tag">C#</span><span class="tag">Exiled</span><span class="tag">Plugin</span>
+            </div>
+            <div class="actions">
+              <a class="btn primary" href="https://github.com/Robocnop/SpawnProtectNotifier" target="_blank" rel="noreferrer">GitHub</a>
+            </div>
+          </article>
+
+          <article class="card reveal" data-tags="C#,Plugin" aria-labelledby="p2">
+            <h3 id="p2">GeneratorLockPlugin</h3>
+            <p class="muted">Verrouille les générateurs en début de partie pour laisser 079 démarrer.</p>
+            <div class="tags">
+              <span class="tag">C#</span><span class="tag">Exiled</span><span class="tag">Plugin</span>
+            </div>
+            <div class="actions">
+              <a class="btn primary" href="https://github.com/Robocnop/GeneratorLockPlugin" target="_blank" rel="noreferrer">GitHub</a>
+            </div>
+          </article>
+
+          <article class="card reveal" data-tags="C#,Plugin" aria-labelledby="p3">
+            <h3 id="p3">AdminServicesNotifier</h3>
+            <p class="muted">Annonce la prise/fin de service admin (ModKit) avec webhook Discord.</p>
+            <div class="tags">
+              <span class="tag">C#</span><span class="tag">Webhook</span><span class="tag">Plugin</span>
+            </div>
+            <div class="actions">
+              <a class="btn primary" href="https://github.com/Robocnop/AdminServicesNotifier" target="_blank" rel="noreferrer">GitHub</a>
+            </div>
+          </article>
+
+          <article class="card reveal" data-tags="Windows,CLI" aria-labelledby="p4">
+            <h3 id="p4">RoUtilitaire07</h3>
+            <p class="muted">Batch multi-outils Windows : infos système, ping IP, nettoyage.</p>
+            <div class="tags">
+              <span class="tag">Windows</span><span class="tag">CLI</span>
+            </div>
+            <div class="actions">
+              <a class="btn primary" href="https://github.com/Robocnop/RoUtilitaire07" target="_blank" rel="noreferrer">GitHub</a>
+            </div>
+          </article>  
+
+          <!-- Exemple de carte avec les projets github -->
+          <!-- <article class="card reveal" data-tags="Python,CLI" aria-labelledby="p5">
+            <h3 id="p5">LogParser CLI</h3>
+            <p class="muted">Utilitaire Python pour trier/filtrer des logs Windows et générer un rapport.</p>
+            <div class="tags">
+              <span class="tag">Python</span><span class="tag">CLI</span>
+            </div>
+            <div class="actions">
+              <a class="btn" href="#" aria-disabled="true">Bientôt</a>
+            </div>
+          </article> -->
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap">
+        <h2>Contact</h2>
+        <p class="section-lead">Contactez-moi !</p>
+
+        <ul class="contact-list">
+          <!-- Email -->
+          <li class="contact-item">
+            <span class="contact-icon" aria-hidden="true">
+              <img class="contact-logo" src="assets/images/mail.png" alt="" />
+            </span>
+            <span class="contact-label">Email</span>
+            <a class="contact-value" id="email-value" href="mailto:robocnop@gmail.com">robocnop@gmail.com</a>
+            <div class="contact-actions">
+              <a class="btn" href="mailto:robocnop@gmail.com" target="_blank" rel="noreferrer">Ouvrir</a>
+              <button class="btn ghost" type="button" data-copy="robocnop@gmail.com">Copier</button>
+            </div>
+          </li>
+
+          <!-- Discord -->
+          <li class="contact-item">
+            <span class="contact-icon" aria-hidden="true">
+              <img class="contact-logo" src="assets/images/discord.png" alt="" />
+            </span>
+            <span class="contact-label">Discord</span>
+            <span class="contact-value" id="discord-value">robocnop</span>
+            <div class="contact-actions">
+              <a class="btn" href="https://discord.com/users/564871522750300160" target="_blank" rel="noreferrer">Ouvrir</a>
+              <button class="btn ghost" type="button" data-copy="robocnop">Copier</button>
+            </div>
+          </li>
+        </ul>
+
+        <p id="copy-feedback" class="copy-feedback" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+  </main>
 
   <footer>
-    <p>&#169; 2024 Robocnop. Tous droits réservés.</p>
+    <div class="wrap">© <span id="year"></span> Robocnop — Tous droits réservés.</div>
   </footer>
+
+  <script type="module" src="assets/js/app.js" defer></script>
 </body>
 </html>
