@@ -2,12 +2,14 @@
   /* Palette par défaut (dark) */
   --bg-0:#0b0f14; --bg-1:#0f1520; --bg-2:#121a27;
   --txt-1:#e6edf3; --txt-2:#9fb0c3;
-  --acc-1:#5dd8ff; --acc-2:#6ee7b7;
-  --muted:#243447; --radius:16px;
+  --acc-1:#5dd8ff; --acc-2:#6ee7b7; --acc-3:#a78bfa;
+  --muted:#243447; --radius:16px; --radius-sm:10px;
   --shadow: 0 10px 30px rgba(0,0,0,0.45);
+  --shadow-lg: 0 20px 60px rgba(0,0,0,0.6);
   --font-sans:"Inter",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
   --font-mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
   --max:1120px;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Si l'utilisateur préfère le mode clair et qu'on est en "auto" (pas de data-theme) */
@@ -188,4 +190,351 @@ footer{ border-top:1px solid var(--muted); padding:32px 0; color:var(--txt-2) }
   .contact-label{ grid-area:label }
   .contact-value{ grid-area:value }
   .contact-actions{ grid-area:actions; justify-self:end }
+}
+
+/* ==================== NOUVEAUX COMPOSANTS UI ==================== */
+
+/* Badges de compétences avec niveau */
+.skills-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.skill-card{
+  padding: 16px 20px;
+  border: 1px solid var(--muted);
+  border-radius: var(--radius-sm);
+  background: linear-gradient(135deg,
+    color-mix(in oklab, var(--bg-1) 90%, transparent),
+    color-mix(in oklab, var(--bg-2) 90%, transparent));
+  box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+  transition: var(--transition);
+}
+
+.skill-card:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(93,216,255,0.15);
+  border-color: color-mix(in oklab, var(--acc-1) 50%, var(--muted));
+}
+
+.skill-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.skill-name{
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--txt-1);
+}
+
+.skill-level{
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--acc-1);
+  font-weight: 600;
+}
+
+.skill-desc{
+  font-size: 13px;
+  color: var(--txt-2);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.skill-badge{
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: linear-gradient(90deg,
+    color-mix(in oklab, var(--acc-1) 20%, transparent),
+    color-mix(in oklab, var(--acc-2) 20%, transparent));
+  border: 1px solid color-mix(in oklab, var(--acc-1) 40%, transparent);
+  color: var(--acc-1);
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+/* Section Outils & Technologies */
+.tools-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.tool-item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 16px;
+  border: 1px solid var(--muted);
+  border-radius: var(--radius-sm);
+  background: linear-gradient(135deg,
+    color-mix(in oklab, var(--bg-1) 85%, transparent),
+    color-mix(in oklab, var(--bg-2) 85%, transparent));
+  transition: var(--transition);
+  text-align: center;
+  gap: 10px;
+}
+
+.tool-item:hover{
+  transform: translateY(-4px) scale(1.02);
+  border-color: var(--acc-1);
+  box-shadow: 0 8px 20px rgba(93,216,255,0.2);
+}
+
+.tool-icon{
+  font-size: 32px;
+  line-height: 1;
+}
+
+.tool-name{
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--txt-1);
+  margin: 0;
+}
+
+.tool-desc{
+  font-size: 11px;
+  color: var(--txt-2);
+  margin: 0;
+}
+
+/* Timeline Formation */
+.timeline{
+  position: relative;
+  padding-left: 32px;
+  margin-top: 24px;
+}
+
+.timeline::before{
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: linear-gradient(180deg, var(--acc-1), var(--acc-2));
+  border-radius: 2px;
+}
+
+.timeline-item{
+  position: relative;
+  padding-bottom: 28px;
+}
+
+.timeline-item::before{
+  content: "";
+  position: absolute;
+  left: -28px;
+  top: 4px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--acc-1);
+  box-shadow: 0 0 0 4px var(--bg-1), 0 0 0 6px var(--acc-1);
+  animation: pulse-dot 2s infinite;
+}
+
+@keyframes pulse-dot{
+  0%, 100%{ box-shadow: 0 0 0 4px var(--bg-1), 0 0 0 6px var(--acc-1); }
+  50%{ box-shadow: 0 0 0 4px var(--bg-1), 0 0 0 8px color-mix(in oklab, var(--acc-1) 50%, transparent); }
+}
+
+.timeline-year{
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--acc-2);
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.timeline-title{
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--txt-1);
+  margin: 0 0 6px;
+}
+
+.timeline-desc{
+  font-size: 14px;
+  color: var(--txt-2);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Badge spécial mentor */
+.mentor-link{
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--acc-1);
+  text-decoration: none;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 6px;
+  transition: var(--transition);
+  background: linear-gradient(90deg,
+    color-mix(in oklab, var(--acc-1) 15%, transparent),
+    color-mix(in oklab, var(--acc-2) 15%, transparent));
+  border: 1px solid color-mix(in oklab, var(--acc-1) 30%, transparent);
+}
+
+.mentor-link:hover{
+  background: linear-gradient(90deg,
+    color-mix(in oklab, var(--acc-1) 25%, transparent),
+    color-mix(in oklab, var(--acc-2) 25%, transparent));
+  transform: translateX(2px);
+  box-shadow: 0 4px 12px rgba(93,216,255,0.3);
+}
+
+.mentor-link::after{
+  content: "→";
+  font-size: 14px;
+}
+
+/* Info boxes */
+.info-box{
+  padding: 16px 20px;
+  border-left: 4px solid var(--acc-1);
+  border-radius: var(--radius-sm);
+  background: linear-gradient(90deg,
+    color-mix(in oklab, var(--acc-1) 8%, var(--bg-1)),
+    var(--bg-1));
+  margin: 20px 0;
+}
+
+.info-box-title{
+  font-weight: 700;
+  color: var(--acc-1);
+  margin: 0 0 8px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.info-box-content{
+  color: var(--txt-2);
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Améliorations des cartes projets */
+.card{
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg,
+    transparent,
+    color-mix(in oklab, var(--acc-1) 10%, transparent),
+    transparent);
+  transition: left 0.6s ease;
+  pointer-events: none;
+}
+
+.card:hover::before{
+  left: 100%;
+}
+
+/* Stats badges */
+.stats-row{
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.stat-badge{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: var(--radius-sm);
+  background: linear-gradient(135deg,
+    color-mix(in oklab, var(--acc-1) 15%, var(--bg-1)),
+    color-mix(in oklab, var(--acc-2) 15%, var(--bg-1)));
+  border: 1px solid color-mix(in oklab, var(--acc-1) 30%, transparent);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.stat-badge-icon{
+  font-size: 18px;
+  line-height: 1;
+}
+
+.stat-badge-value{
+  color: var(--txt-1);
+}
+
+.stat-badge-label{
+  color: var(--txt-2);
+  font-size: 11px;
+}
+
+/* Section avec fond dégradé */
+.section-alt{
+  position: relative;
+  background: linear-gradient(180deg, transparent, color-mix(in oklab, var(--bg-2) 50%, transparent), transparent);
+  border-top: 1px solid color-mix(in oklab, var(--muted) 50%, transparent);
+  border-bottom: 1px solid color-mix(in oklab, var(--muted) 50%, transparent);
+}
+
+/* Listes stylées */
+.styled-list{
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.styled-list li{
+  padding: 12px 0 12px 32px;
+  position: relative;
+  color: var(--txt-2);
+  line-height: 1.6;
+}
+
+.styled-list li::before{
+  content: "▹";
+  position: absolute;
+  left: 0;
+  color: var(--acc-1);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1;
+}
+
+/* Responsive amélioré */
+@media (max-width: 720px){
+  .skills-grid{
+    grid-template-columns: 1fr;
+  }
+
+  .tools-grid{
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  }
+
+  .timeline{
+    padding-left: 28px;
+  }
 }
