@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="color-scheme" content="dark light" />
 
-  <title>Portfolio Robocnop — Technicien Informatique</title>
-  <meta name="description" content="Technicien en informatique" />
+  <title>Portfolio Robocnop — Étudiant en Informatique</title>
+  <meta name="description" content="Étudiant en informatique passionné, je crée des outils pratiques avec l'aide de l'IA pour faciliter le quotidien." />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://portfolio-dev-robocnop.vercel.app/" />
-  <meta property="og:title" content="Portfolio Robocnop — Technicien IT" />
-  <meta property="og:description" content="Je conçois des utilitaires et des plugins pragmatiques. Découvrez mes projets C#, Batch et Web." />
+  <meta property="og:title" content="Portfolio Robocnop — Étudiant en Informatique" />
+  <meta property="og:description" content="Étudiant passionné créant des outils avec l'aide de l'IA. Découvrez mes projets C#, Batch et Web." />
   <meta property="og:image" content="https://portfolio-dev-robocnop.vercel.app/assets/images/EggmanRobo.png" />
   <meta name="theme-color" content="#5dd8ff" />
 
@@ -43,34 +43,165 @@
     <section id="accueil" class="hero">
       <div class="wrap hero-grid">
         <div>
-          <div class="kicker">Technicien IT • Réseau, scripts, assistance utilisateur, hardware</div>
-          <h1>Je suis là pour vous aider dans l’informatique au quotidien.</h1>
-          <p class="lead">Tooling Windows (batch), C# (légèrement), web, bases de données. Objectif : vous aider du mieux que je peux.</p>
+          <div class="kicker">Étudiant en Informatique (Technicien)</div>
+          <h1>Je vous assiste au quotidien dans les problèmes informatiques rencontrés.</h1>
+          <p class="lead">Étudiant passionné développant des outils pratiques avec l'aide de l'IA. J'apprends une grande partie de mes connaissances en réseau et systèmes grâce à <a href="https://geniedureseau.be/" target="_blank" rel="noreferrer noopener" class="mentor-link" style="display:inline-flex; font-size:inherit; padding:2px 8px; margin:0 2px;">Chapal</a>, le meilleur formateur en réseau et système.</p>
           <div class="mono-chip" style="margin-top:14px">$ whoami — robocnop@workspace</div>
           <div class="actions" style="margin-top:14px">
-            <button class="btn" id="copy-mail" data-mail="robocnop@gmail.com" aria-label="Copier mon email">Copier mon email</button>
+            <button class="btn primary" id="copy-mail" data-mail="robocnop@gmail.com" aria-label="Copier mon email">Copier mon email</button>
             <a class="btn" href="https://github.com/Robocnop" target="_blank" rel="noreferrer noopener">GitHub</a>
           </div>
           <p id="copy-feedback" class="copy-feedback" role="status" aria-live="polite"></p>
         </div>
         <aside class="hero-card reveal">
-          <h3 style="margin:0 0 8px">Compétences-clés</h3>
-          <ul class="muted">
-            <li>Scripts Windows (batch)</li>
-            <li>C# (.NET) — plugins &amp; utilitaires</li>
-            <li>HTML, CSS, JS — sites web statiques</li>
-            <li>SQL — gestion de bases de données</li>
-            <li>Support utilisateur &amp; dépannage</li>
-            <li>Montage &amp; maintenance PC</li>
-          </ul>
+          <h3 style="margin:0 0 16px">Aperçu rapide</h3>
+          <div class="stats-row" style="flex-direction:column; gap:10px">
+            <div class="stat-badge">
+              <span class="stat-badge-icon">🎓</span>
+              <div style="display:flex; flex-direction:column">
+                <span class="stat-badge-value">Rhéto</span>
+                <span class="stat-badge-label">6ème secondaire (BE)</span>
+              </div>
+            </div>
+            <div class="stat-badge">
+              <span class="stat-badge-icon">💻</span>
+              <div style="display:flex; flex-direction:column">
+                <span class="stat-badge-value">Technicien IT</span>
+                <span class="stat-badge-label">Support & développement</span>
+              </div>
+            </div>
+            <div class="stat-badge">
+              <span class="stat-badge-icon">🤖</span>
+              <div style="display:flex; flex-direction:column">
+                <span class="stat-badge-value">IA-Assisted</span>
+                <span class="stat-badge-label">Apprentissage continu</span>
+              </div>
+            </div>
+          </div>
         </aside>
       </div>
     </section>
 
-    <section id="apropos">
+    <section id="apropos" class="section-alt">
       <div class="wrap">
         <h2>À propos</h2>
-        <p class="section-lead">Je conçois des utilitaires et des plugins pragmatiques et documentés. Mon approche que j'essaye de respecter : code lisible et efficacité du "produit".</p>
+        <p class="section-lead">Ma philosophie : je crée des outils avec l'aide de l'IA afin de rendre l'utilisation de certaines technologies plus facile et évidemment plus fiable. L'intelligence artificielle n'est pas là pour tout faire à ma place, mais pour m'aider à progresser et à comprendre les concepts plus rapidement.</p>
+
+        <div class="info-box" style="margin-top:24px">
+          <div class="info-box-title">
+            <span>💡</span>
+            <span>Mon approche d'apprentissage</span>
+          </div>
+          <p class="info-box-content">J'utilise l'IA comme un mentor accessible 24/7 qui m'explique les concepts, me guide dans la résolution de problèmes et m'aide à écrire du code plus propre. Chaque projet est une opportunité d'apprendre quelque chose de nouveau.</p>
+        </div>
+
+        <h3 style="margin-top:40px; margin-bottom:20px; font-size:24px">Compétences techniques</h3>
+        <div class="skills-grid">
+          <div class="skill-card reveal">
+            <div class="skill-header">
+              <span class="skill-name">Scripts Windows (Batch)</span>
+              <span class="skill-level">Intermédiaire</span>
+            </div>
+            <p class="skill-desc">Automatisation de tâches système, utilitaires CLI. Appris avec <a href="https://geniedureseau.be/" target="_blank" rel="noreferrer noopener" class="mentor-link" style="display:inline-flex; font-size:12px; padding:2px 6px;">Chapal</a></p>
+          </div>
+
+          <div class="skill-card reveal">
+            <div class="skill-header">
+              <span class="skill-name">C# (.NET)</span>
+              <span class="skill-level">Intermédiaire</span>
+            </div>
+            <p class="skill-desc">Développement de plugins Exiled, utilitaires desktop. Bases solides en POO et architecture.</p>
+          </div>
+
+          <div class="skill-card reveal">
+            <div class="skill-header">
+              <span class="skill-name">HTML, CSS, JavaScript</span>
+              <span class="skill-level">Intermédiaire</span>
+            </div>
+            <p class="skill-desc">Création de sites web statiques modernes, design responsive, animations CSS.</p>
+          </div>
+
+          <div class="skill-card reveal">
+            <div class="skill-header">
+              <span class="skill-name">SQL & Bases de données</span>
+              <span class="skill-level">Débutant</span>
+            </div>
+            <p class="skill-desc">Requêtes de base, gestion de données simples. En cours d'apprentissage.</p>
+          </div>
+
+          <div class="skill-card reveal">
+            <div class="skill-header">
+              <span class="skill-name">Support utilisateur</span>
+              <span class="skill-level">Avancé</span>
+            </div>
+            <p class="skill-desc">Dépannage matériel/logiciel, assistance technique, résolution de problèmes.</p>
+          </div>
+
+          <div class="skill-card reveal">
+            <div class="skill-header">
+              <span class="skill-name">Montage & Maintenance PC</span>
+              <span class="skill-level">Avancé</span>
+            </div>
+            <p class="skill-desc">Assemblage, diagnostic hardware, optimisation système Windows.</p>
+          </div>
+
+          <div class="skill-card reveal">
+            <div class="skill-header">
+              <span class="skill-name">Gestion serveur Debian</span>
+              <span class="skill-level">Débutant</span>
+            </div>
+            <p class="skill-desc">GLPI, administration système Linux. Firewall en cours d'apprentissage.</p>
+            <span class="skill-badge">🚀 En apprentissage</span>
+          </div>
+        </div>
+
+        <h3 style="margin-top:48px; margin-bottom:20px; font-size:24px">Outils & Apprentissage</h3>
+        <div class="tools-grid">
+          <div class="tool-item reveal">
+            <div class="tool-icon">🤖</div>
+            <p class="tool-name">Claude AI</p>
+            <p class="tool-desc">Assistant IA</p>
+          </div>
+
+          <div class="tool-item reveal">
+            <div class="tool-icon">🚀</div>
+            <p class="tool-name">JetBrains Rider</p>
+            <p class="tool-desc">IDE C#</p>
+          </div>
+
+          <div class="tool-item reveal">
+            <div class="tool-icon">💻</div>
+            <p class="tool-name">VS Code</p>
+            <p class="tool-desc">Éditeur de code</p>
+          </div>
+
+          <div class="tool-item reveal">
+            <div class="tool-icon">📦</div>
+            <p class="tool-name">GitHub Desktop</p>
+            <p class="tool-desc">Gestion Git</p>
+          </div>
+        </div>
+
+        <h3 style="margin-top:48px; margin-bottom:24px; font-size:24px">Formation</h3>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-year">2024 - 2025</div>
+            <h4 class="timeline-title">5ème secondaire (Belgique)</h4>
+            <p class="timeline-desc">Formation de technicien en informatique. Spécialisation en réseau, systèmes et support utilisateur avec <a href="https://geniedureseau.be/" target="_blank" rel="noreferrer noopener" class="mentor-link">Chapal (André Chapaux)</a> — Première année.</p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-year">2025 - 2026</div>
+            <h4 class="timeline-title">Rhéto (6ème secondaire)</h4>
+            <p class="timeline-desc">Dernière année de formation avec <a href="https://geniedureseau.be/" target="_blank" rel="noreferrer noopener" class="mentor-link">Chapal (André Chapaux)</a>. Fin du cycle secondaire.</p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-year">Formation continue</div>
+            <h4 class="timeline-title">Apprentissage autodidacte</h4>
+            <p class="timeline-desc">Développement C#, apprentissage assisté par IA, projets personnels et open-source.</p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -173,7 +304,7 @@
     <section id="contact">
       <div class="wrap">
         <h2>Contact</h2>
-        <p class="section-lead">Contactez-moi !</p>
+        <p class="section-lead">Une question, un projet, ou juste envie de discuter tech ? N'hésitez pas à me contacter !</p>
 
         <ul class="contact-list">
           <!-- Email -->
