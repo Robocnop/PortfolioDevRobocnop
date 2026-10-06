@@ -538,3 +538,21 @@ footer{ border-top:1px solid var(--muted); padding:32px 0; color:var(--txt-2) }
     padding-left: 28px;
   }
 }
+
+/* Profil */
+.profile{ display:flex; align-items:center; gap:14px; margin-bottom:16px }
+.profile .avatar{ width:72px; height:72px; border-radius:50%; border:2px solid var(--acc-1); object-fit:cover }
+.profile a{ text-decoration:none; font-family:var(--font-mono); font-size:.9rem }
+.brand img{ border-radius:50% }
+
+/* Lien Chapal */
+.mentor-link.mentor-inline{ font-size:inherit; padding:2px 8px; margin:0 2px }
+.mentor-link.mentor-small{ font-size:12px; padding:2px 6px }
+
+/* Grille projets */
+@media (min-width: 961px){ .grid .card{ grid-column: span 4 } }
+.stars{ font-family:var(--font-mono); font-size:.8rem; font-weight:600; color:var(--acc-2); margin-left:6px; white-space:nowrap }
+.contrib-list{ margin:0; padding-left:18px; display:grid; gap:4px; font-family:var(--font-mono); font-size:.85rem }
+.contrib-list a{ color:var(--acc-1); text-decoration:none }
+.contrib-list a:hover{ text-decoration:underline }
+#main-nav{ display:flex; flex-wrap:wrap }

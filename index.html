@@ -13,26 +13,27 @@
   <meta property="og:url" content="https://portfolio-dev-robocnop.vercel.app/" />
   <meta property="og:title" content="Portfolio Robocnop — Étudiant en Informatique" />
   <meta property="og:description" content="Étudiant passionné créant des outils avec l'aide de l'IA. Découvrez mes projets C#, Batch et Web." />
-  <meta property="og:image" content="https://portfolio-dev-robocnop.vercel.app/assets/images/EggmanRobo.png" />
+  <meta property="og:image" content="https://avatars.githubusercontent.com/u/100038363?v=4&s=400" />
   <meta name="theme-color" content="#5dd8ff" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/style.css" />
-  <link rel="icon" type="image/png" href="assets/images/EggmanRobo.png" />
+  <link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/u/100038363?v=4&s=64" />
 </head>
 <body>
   <header class="site-header">
     <div class="wrap nav">
       <a class="brand" href="#accueil" aria-label="Accueil — Robocnop">
-        <img src="assets/images/EggmanRobo.png" alt="Logo Robocnop" />
+        <img src="https://avatars.githubusercontent.com/u/100038363?v=4&s=80" alt="Photo de profil de Robocnop" width="40" height="40" />
         <strong>Robocnop</strong>
       </a>
       <nav aria-label="Navigation principale" id="main-nav">
         <a href="#accueil" data-nav>Accueil</a>
         <a href="#apropos" data-nav>À propos</a>
         <a href="#projets" data-nav>Projets</a>
+        <a href="#contributions" data-nav>Contributions</a>
         <a href="#contact" data-nav>Contact</a>
       </nav>
       <button class="btn ghost" id="theme-toggle" aria-label="Basculer le thème">🌗</button>
@@ -43,9 +44,9 @@
     <section id="accueil" class="hero">
       <div class="wrap hero-grid">
         <div>
-          <div class="kicker">Étudiant en Informatique (Technicien)</div>
+          <div class="kicker">Étudiant en Informatique — DFP 2026-2027</div>
           <h1>Je vous assiste au quotidien dans les problèmes informatiques rencontrés.</h1>
-          <p class="lead">Étudiant passionné développant des outils pratiques avec l'aide de l'IA. J'apprends une grande partie de mes connaissances en réseau et systèmes grâce à <a href="https://geniedureseau.be/" target="_blank" rel="noreferrer noopener" class="mentor-link" style="display:inline-flex; font-size:inherit; padding:2px 8px; margin:0 2px;">Chapal</a>, le meilleur formateur en réseau et système.</p>
+          <p class="lead">Étudiant passionné développant des outils pratiques avec l'aide de l'IA. J'apprends une grande partie de mes connaissances en réseau et systèmes grâce à <a href="https://chapal.be/" target="_blank" rel="noreferrer noopener" class="mentor-link mentor-inline">Chapal</a>, le meilleur formateur en réseau et système.</p>
           <div class="mono-chip" style="margin-top:14px">$ whoami — robocnop@workspace</div>
           <div class="actions" style="margin-top:14px">
             <button class="btn primary" id="copy-mail" data-mail="robocnop@gmail.com" aria-label="Copier mon email">Copier mon email</button>
@@ -54,13 +55,19 @@
           <p id="copy-feedback" class="copy-feedback" role="status" aria-live="polite"></p>
         </div>
         <aside class="hero-card reveal">
-          <h3 style="margin:0 0 16px">Aperçu rapide</h3>
+          <div class="profile">
+            <img class="avatar" src="https://avatars.githubusercontent.com/u/100038363?v=4&s=192" alt="Photo de profil de Robocnop" width="72" height="72" />
+            <div>
+              <h3 style="margin:0">Robocnop</h3>
+              <a class="muted" href="https://github.com/Robocnop" target="_blank" rel="noreferrer noopener">@Robocnop</a>
+            </div>
+          </div>
           <div class="stats-row" style="flex-direction:column; gap:10px">
             <div class="stat-badge">
               <span class="stat-badge-icon">🎓</span>
               <div style="display:flex; flex-direction:column">
-                <span class="stat-badge-value">Rhéto</span>
-                <span class="stat-badge-label">6ème secondaire (BE)</span>
+                <span class="stat-badge-value">DFP</span>
+                <span class="stat-badge-label">2026-2027 · en cours</span>
               </div>
             </div>
             <div class="stat-badge">
@@ -102,15 +109,15 @@
               <span class="skill-name">Scripts Windows (Batch)</span>
               <span class="skill-level">Intermédiaire</span>
             </div>
-            <p class="skill-desc">Automatisation de tâches système, utilitaires CLI. Appris avec <a href="https://geniedureseau.be/" target="_blank" rel="noreferrer noopener" class="mentor-link" style="display:inline-flex; font-size:12px; padding:2px 6px;">Chapal</a></p>
+            <p class="skill-desc">Automatisation de tâches système, utilitaires CLI. Appris avec <a href="https://chapal.be/" target="_blank" rel="noreferrer noopener" class="mentor-link mentor-small">Chapal</a></p>
           </div>
 
           <div class="skill-card reveal">
             <div class="skill-header">
               <span class="skill-name">C# (.NET)</span>
-              <span class="skill-level">Intermédiaire</span>
+              <span class="skill-level">Au feeling</span>
             </div>
-            <p class="skill-desc">Développement de plugins Exiled, utilitaires desktop. Bases solides en POO et architecture.</p>
+            <p class="skill-desc">J'en fais quand ça me chante : pas de niveau fixe, ça dépend des projets du moment. Plugins Nova-Life et SCP:SL, applis Windows.</p>
           </div>
 
           <div class="skill-card reveal">
@@ -126,7 +133,7 @@
               <span class="skill-name">SQL & Bases de données</span>
               <span class="skill-level">Débutant</span>
             </div>
-            <p class="skill-desc">Requêtes de base, gestion de données simples. En cours d'apprentissage. Appris avec <a href="https://geniedureseau.be/" target="_blank" rel="noreferrer noopener" class="mentor-link" style="display:inline-flex; font-size:12px; padding:2px 6px;">Chapal</a></p>
+            <p class="skill-desc">Requêtes de base, gestion de données simples. En cours d'apprentissage. Appris avec <a href="https://chapal.be/" target="_blank" rel="noreferrer noopener" class="mentor-link mentor-small">Chapal</a></p>
           </div>
 
           <div class="skill-card reveal">
@@ -134,7 +141,7 @@
               <span class="skill-name">Support utilisateur</span>
               <span class="skill-level">Avancé</span>
             </div>
-            <p class="skill-desc">Dépannage matériel/logiciel, assistance technique, résolution de problèmes. Appris avec <a href="https://geniedureseau.be/" target="_blank" rel="noreferrer noopener" class="mentor-link" style="display:inline-flex; font-size:12px; padding:2px 6px;">Chapal</a></p>
+            <p class="skill-desc">Dépannage matériel/logiciel, assistance technique, résolution de problèmes. Appris avec <a href="https://chapal.be/" target="_blank" rel="noreferrer noopener" class="mentor-link mentor-small">Chapal</a></p>
           </div>
 
           <div class="skill-card reveal">
@@ -142,15 +149,15 @@
               <span class="skill-name">Montage & Maintenance PC</span>
               <span class="skill-level">Avancé</span>
             </div>
-            <p class="skill-desc">Assemblage, diagnostic hardware, optimisation système Windows. Appris avec <a href="https://geniedureseau.be/" target="_blank" rel="noreferrer noopener" class="mentor-link" style="display:inline-flex; font-size:12px; padding:2px 6px;">Chapal</a></p>
+            <p class="skill-desc">Assemblage, diagnostic hardware, optimisation système Windows. Appris avec <a href="https://chapal.be/" target="_blank" rel="noreferrer noopener" class="mentor-link mentor-small">Chapal</a></p>
           </div>
 
           <div class="skill-card reveal">
             <div class="skill-header">
               <span class="skill-name">Gestion serveur Debian</span>
-              <span class="skill-level">Débutant</span>
+              <span class="skill-level">Intermédiaire</span>
             </div>
-            <p class="skill-desc">GLPI, administration système Linux. Firewall en cours d'apprentissage. Appris avec <a href="https://geniedureseau.be/" target="_blank" rel="noreferrer noopener" class="mentor-link" style="display:inline-flex; font-size:12px; padding:2px 6px;">Chapal</a>
+            <p class="skill-desc">GLPI, administration système Linux. Firewall en cours d'apprentissage. Appris avec <a href="https://chapal.be/" target="_blank" rel="noreferrer noopener" class="mentor-link mentor-small">Chapal</a></p>
             <span class="skill-badge">🚀 En apprentissage</span>
           </div>
         </div>
@@ -187,13 +194,19 @@
           <div class="timeline-item">
             <div class="timeline-year">2024 - 2025</div>
             <h4 class="timeline-title">5ème secondaire (Belgique)</h4>
-            <p class="timeline-desc">Formation de technicien en informatique. Spécialisation en réseau, systèmes et support utilisateur avec <a href="https://geniedureseau.be/" target="_blank" rel="noreferrer noopener" class="mentor-link">Chapal (André Chapaux)</a> — Première année.</p>
+            <p class="timeline-desc">Formation de technicien en informatique. Spécialisation en réseau, systèmes et support utilisateur avec <a href="https://chapal.be/" target="_blank" rel="noreferrer noopener" class="mentor-link">Chapal (André Chapaux)</a> — Première année.</p>
           </div>
 
           <div class="timeline-item">
             <div class="timeline-year">2025 - 2026</div>
             <h4 class="timeline-title">Rhéto (6ème secondaire)</h4>
-            <p class="timeline-desc">Dernière année de formation avec <a href="https://geniedureseau.be/" target="_blank" rel="noreferrer noopener" class="mentor-link">Chapal (André Chapaux)</a>. Fin du cycle secondaire.</p>
+            <p class="timeline-desc">Deuxième année de formation avec <a href="https://chapal.be/" target="_blank" rel="noreferrer noopener" class="mentor-link">Chapal (André Chapaux)</a>.</p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-year">2026 - 2027 · En cours</div>
+            <h4 class="timeline-title">DFP</h4>
+            <p class="timeline-desc">Je poursuis ma formation : certificat pas encore obtenu, l'aventure continue.</p>
           </div>
 
           <div class="timeline-item">
@@ -208,95 +221,203 @@
     <section id="projets">
       <div class="wrap">
         <h2>Projets réalisés par Robocnop</h2>
+        <p class="section-lead">Tous mes dépôts publics sur GitHub, du plus récent au plus ancien.</p>
 
         <!-- Filtres (JS) -->
         <div class="filters" role="group" aria-label="Filtrer les projets">
           <button class="chip is-active" data-filter="all">Tout</button>
           <button class="chip" data-filter="C#">C#</button>
           <button class="chip" data-filter="Windows">Windows</button>
-          <!-- <button class="chip" data-filter="Python">Python</button> -->
-          <button class="chip" data-filter="Plugin">Plugin</button>
+          <button class="chip" data-filter="Nova-Life">Nova-Life</button>
+          <button class="chip" data-filter="SCP:SL">SCP:SL</button>
+          <button class="chip" data-filter="Web">Web</button>
+          <button class="chip" data-filter="Python">Python</button>
         </div>
 
         <div class="grid" id="project-grid">
-          <!-- Exemple de carte avec data-tags (utilisé par le filtre JS) -->
-          <article class="card reveal" data-tags="C#,Plugin" aria-labelledby="p1">
-            <h3 id="p1">SpawnProtectNotifier</h3>
-            <p class="muted">Plugin C# (Exiled) qui notifie la fin de l’invulnérabilité de spawn.</p>
-            <div class="tags">
-              <span class="tag">C#</span><span class="tag">Exiled</span><span class="tag">Plugin</span>
-            </div>
-            <div class="actions">
-              <a class="btn primary" href="https://github.com/Robocnop/SpawnProtectNotifier" target="_blank" rel="noreferrer noopener">GitHub</a>
-            </div>
+          <article class="card reveal" data-tags="C#,Windows" aria-labelledby="p-wtml">
+            <h3 id="p-wtml">WarThunderModLauncher</h3>
+            <p class="muted">Launcher de mods pour War Thunder.</p>
+            <div class="tags"><span class="tag">C#</span><span class="tag">Windows</span></div>
+            <div class="actions"><a class="btn primary" href="https://github.com/Robocnop/WarThunderModLauncher" target="_blank" rel="noreferrer noopener">GitHub</a></div>
           </article>
 
-          <article class="card reveal" data-tags="C#,Plugin" aria-labelledby="p2">
-            <h3 id="p2">GeneratorLockPlugin</h3>
-            <p class="muted">Verrouille les générateurs en début de partie pour laisser 079 démarrer.</p>
-            <div class="tags">
-              <span class="tag">C#</span><span class="tag">Exiled</span><span class="tag">Plugin</span>
-            </div>
-            <div class="actions">
-              <a class="btn primary" href="https://github.com/Robocnop/GeneratorLockPlugin" target="_blank" rel="noreferrer noopener">GitHub</a>
-            </div>
+          <article class="card reveal" data-tags="C#,Windows" aria-labelledby="p-bvm">
+            <h3 id="p-bvm">BootVideoManager</h3>
+            <p class="muted">Appli Windows pour parcourir, prévisualiser et installer des vidéos de démarrage pour Steam Big Picture et le Steam Deck, via le catalogue steamdeckrepo.com.</p>
+            <div class="tags"><span class="tag">C#</span><span class="tag">Windows</span><span class="tag">Steam</span></div>
+            <div class="actions"><a class="btn primary" href="https://github.com/Robocnop/BootVideoManager" target="_blank" rel="noreferrer noopener">GitHub</a></div>
           </article>
 
-          <article class="card reveal" data-tags="C#,Plugin" aria-labelledby="p3">
-            <h3 id="p3">AdminServicesNotifier</h3>
-            <p class="muted">Annonce la prise/fin de service admin (ModKit) avec webhook Discord.</p>
-            <div class="tags">
-              <span class="tag">C#</span><span class="tag">Webhook</span><span class="tag">Plugin</span>
-            </div>
-            <div class="actions">
-              <a class="btn primary" href="https://github.com/Robocnop/AdminServicesNotifier" target="_blank" rel="noreferrer noopener">GitHub</a>
-            </div>
+          <article class="card reveal" data-tags="C#,Windows" aria-labelledby="p-wot">
+            <h3 id="p-wot">config-Wot-Alsain-mod</h3>
+            <p class="muted">Ma config pour le modpack Aslain de World of Tanks, avec un installateur maison (RoboAslainInstaller) qui la télécharge et lance l'installation automatiquement.</p>
+            <div class="tags"><span class="tag">C#</span><span class="tag">Windows</span><span class="tag">Installateur</span></div>
+            <div class="actions"><a class="btn primary" href="https://github.com/Robocnop/config-Wot-Alsain-mod" target="_blank" rel="noreferrer noopener">GitHub</a></div>
           </article>
 
-          <article class="card reveal" data-tags="Windows,CLI" aria-labelledby="p4">
-            <h3 id="p4">RoUtilitaire07</h3>
+          <article class="card reveal" data-tags="C#,SCP:SL" aria-labelledby="p-spn">
+            <h3 id="p-spn">SpawnProtectNotifier</h3>
+            <p class="muted">Plugin SCP:SL qui notifie la fin de l'invulnérabilité de spawn.</p>
+            <div class="tags"><span class="tag">C#</span><span class="tag">SCP:SL</span><span class="tag">Plugin</span></div>
+            <div class="actions"><a class="btn primary" href="https://github.com/Robocnop/SpawnProtectNotifier" target="_blank" rel="noreferrer noopener">GitHub</a></div>
+          </article>
+
+          <article class="card reveal" data-tags="C#,Nova-Life" aria-labelledby="p-asn">
+            <h3 id="p-asn">AdminServicesNotifier</h3>
+            <p class="muted">Plugin Nova-Life qui annonce quand un admin est disponible sur le serveur et logge son activité via un webhook Discord.</p>
+            <div class="tags"><span class="tag">C#</span><span class="tag">Nova-Life</span><span class="tag">Webhook</span></div>
+            <div class="actions"><a class="btn primary" href="https://github.com/Robocnop/AdminServicesNotifier" target="_blank" rel="noreferrer noopener">GitHub</a></div>
+          </article>
+
+          <article class="card reveal" data-tags="C#,Nova-Life" aria-labelledby="p-nr">
+            <h3 id="p-nr">NovaRewards</h3>
+            <p class="muted">Gestion complète de codes cadeaux pour serveurs Nova-Life : argent, loterie ou objets à distribuer aux joueurs.</p>
+            <div class="tags"><span class="tag">C#</span><span class="tag">Nova-Life</span><span class="tag">Plugin</span></div>
+            <div class="actions"><a class="btn primary" href="https://github.com/Robocnop/NovaRewards" target="_blank" rel="noreferrer noopener">GitHub</a></div>
+          </article>
+
+          <article class="card reveal" data-tags="C#,Nova-Life" aria-labelledby="p-nac">
+            <h3 id="p-nac">NovaAdminsChat</h3>
+            <p class="muted">Plugin Nova-Life ajoutant un canal de discussion en jeu réservé aux admins.</p>
+            <div class="tags"><span class="tag">C#</span><span class="tag">Nova-Life</span><span class="tag">Plugin</span></div>
+            <div class="actions"><a class="btn primary" href="https://github.com/Robocnop/NovaAdminsChat" target="_blank" rel="noreferrer noopener">GitHub</a></div>
+          </article>
+
+          <article class="card reveal" data-tags="C#" aria-labelledby="p-hue">
+            <h3 id="p-hue">HueConnectRefactored</h3>
+            <p class="muted">Ma version de HueConnect : plugin réorganisé pour une base de code plus propre et maintenable.</p>
+            <div class="tags"><span class="tag">C#</span><span class="tag">Plugin</span><span class="tag">Fork</span></div>
+            <div class="actions"><a class="btn primary" href="https://github.com/Robocnop/HueConnectRefactored" target="_blank" rel="noreferrer noopener">GitHub</a></div>
+          </article>
+
+          <article class="card reveal" data-tags="Web" aria-labelledby="p-gmod">
+            <h3 id="p-gmod">robo-s-gmod-loading</h3>
+            <p class="muted">Écran de chargement web pour serveur Garry's Mod.</p>
+            <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">GMod</span></div>
+            <div class="actions"><a class="btn primary" href="https://github.com/Robocnop/robo-s-gmod-loading" target="_blank" rel="noreferrer noopener">GitHub</a></div>
+          </article>
+
+          <article class="card reveal" data-tags="C#,Nova-Life" aria-labelledby="p-advent">
+            <h3 id="p-advent">NovaAdventCalendar</h3>
+            <p class="muted">Calendrier de l'avent pour serveurs Nova-Life.</p>
+            <div class="tags"><span class="tag">C#</span><span class="tag">Nova-Life</span><span class="tag">Plugin</span></div>
+            <div class="actions"><a class="btn primary" href="https://github.com/Robocnop/NovaAdventCalendar" target="_blank" rel="noreferrer noopener">GitHub</a></div>
+          </article>
+
+          <article class="card reveal" data-tags="Nova-Life" aria-labelledby="p-weather">
+            <h3 id="p-weather">WeatherPlugin</h3>
+            <p class="muted">Change automatiquement la météo du serveur Nova-Life, avec notifications en jeu et sur Discord.</p>
+            <div class="tags"><span class="tag">Nova-Life</span><span class="tag">Plugin</span><span class="tag">Discord</span></div>
+            <div class="actions"><a class="btn primary" href="https://github.com/Robocnop/WeatherPlugin" target="_blank" rel="noreferrer noopener">GitHub</a></div>
+          </article>
+
+          <article class="card reveal" data-tags="Nova-Life" aria-labelledby="p-revive">
+            <h3 id="p-revive">PluginRevive</h3>
+            <p class="muted">Commande /revive : un joueur inconscient se soigne seul si aucun médecin ni joueur n'est à proximité. Repris du plugin de Victor2603.</p>
+            <div class="tags"><span class="tag">Nova-Life</span><span class="tag">Plugin</span></div>
+            <div class="actions"><a class="btn primary" href="https://github.com/Robocnop/-revive" target="_blank" rel="noreferrer noopener">GitHub</a></div>
+          </article>
+
+          <article class="card reveal" data-tags="C#,SCP:SL" aria-labelledby="p-gen">
+            <h3 id="p-gen">GeneratorLockPlugin</h3>
+            <p class="muted">Plugin SCP:SL qui verrouille les générateurs en début de partie pour laisser 079 démarrer.</p>
+            <div class="tags"><span class="tag">C#</span><span class="tag">SCP:SL</span><span class="tag">Plugin</span></div>
+            <div class="actions"><a class="btn primary" href="https://github.com/Robocnop/GeneratorLockPlugin" target="_blank" rel="noreferrer noopener">GitHub</a></div>
+          </article>
+
+          <article class="card reveal" data-tags="Windows" aria-labelledby="p-upd">
+            <h3 id="p-upd">Update-all-on-your-Windows</h3>
+            <p class="muted">Script Batch qui met tout à jour sur Windows en une fois.</p>
+            <div class="tags"><span class="tag">Batch</span><span class="tag">Windows</span></div>
+            <div class="actions"><a class="btn primary" href="https://github.com/Robocnop/Update-all-on-your-Windows" target="_blank" rel="noreferrer noopener">GitHub</a></div>
+          </article>
+
+          <article class="card reveal" data-tags="Windows" aria-labelledby="p-rou">
+            <h3 id="p-rou">RoUtilitaire07</h3>
             <p class="muted">Batch multi-outils Windows : infos système, ping IP, nettoyage.</p>
-            <div class="tags">
-              <span class="tag">Windows</span><span class="tag">CLI</span>
-            </div>
-            <div class="actions">
-              <a class="btn primary" href="https://github.com/Robocnop/RoUtilitaire07" target="_blank" rel="noreferrer noopener">GitHub</a>
-            </div>
+            <div class="tags"><span class="tag">Batch</span><span class="tag">Windows</span><span class="tag">CLI</span></div>
+            <div class="actions"><a class="btn primary" href="https://github.com/Robocnop/RoUtilitaire07" target="_blank" rel="noreferrer noopener">GitHub</a></div>
           </article>
 
-          <article class="card reveal" data-tags="C#,Plugin" aria-labelledby="p5">
-            <h3 id="p5">NovaAdminsChat</h3>
-            <p class="muted">Plugin C# ajoutant un canal de discussion dédié aux administrateurs (messages privés entre admins en jeu).</p>
-            <div class="tags">
-              <span class="tag">C#</span><span class="tag">Plugin</span>
-            </div>
-            <div class="actions">
-              <a class="btn primary" href="https://github.com/Robocnop/NovaAdminsChat" target="_blank" rel="noreferrer noopener">GitHub</a>
-            </div>
+          <article class="card reveal" data-tags="Python" aria-labelledby="p-plat">
+            <h3 id="p-plat">Platformer en Python</h3>
+            <p class="muted">Jeu de plateforme réalisé chez Logiscool (inachevé).</p>
+            <div class="tags"><span class="tag">Python</span><span class="tag">Jeu</span></div>
+            <div class="actions"><a class="btn primary" href="https://github.com/Robocnop/Platformer-in-python--UNFINISHED-" target="_blank" rel="noreferrer noopener">GitHub</a></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contributions" class="section-alt">
+      <div class="wrap">
+        <h2>Contributions open-source</h2>
+        <p class="section-lead">Les projets d'autres développeurs auxquels j'ai contribué, surtout via des traductions françaises.</p>
+
+        <div class="grid">
+          <article class="card reveal" aria-labelledby="c-duck">
+            <h3 id="c-duck">optimizerDuck <span class="stars">★ 10k+</span></h3>
+            <p class="muted">Outil open-source d'optimisation Windows. J'ai ajouté la traduction française (fr-FR), puis je l'ai réécrite pour qu'elle sonne naturelle.</p>
+            <div class="tags"><span class="tag">C#</span><span class="tag">Traduction</span></div>
+            <div class="actions"><a class="btn" href="https://github.com/itsfatduck/optimizerDuck" target="_blank" rel="noreferrer noopener">itsfatduck/optimizerDuck</a></div>
           </article>
 
-          <article class="card reveal" data-tags="C#,Plugin" aria-labelledby="p6">
-            <h3 id="p6">HueConnectRefactored</h3>
-            <p class="muted">Refactorisation de HueConnect : plugin C# réorganisé pour une base de code plus propre et maintenable.</p>
-            <div class="tags">
-              <span class="tag">C#</span><span class="tag">Plugin</span>
-            </div>
-            <div class="actions">
-              <a class="btn primary" href="https://github.com/Robocnop/HueConnectRefactored" target="_blank" rel="noreferrer noopener">GitHub</a>
-            </div>
+          <article class="card reveal" aria-labelledby="c-gmp">
+            <h3 id="c-gmp">gmpublisher <span class="stars">★ 1k+</span></h3>
+            <p class="muted">Outil de publication Workshop pour Garry's Mod (Rust, Svelte, Tauri). Mise à jour de la traduction française.</p>
+            <div class="tags"><span class="tag">Rust</span><span class="tag">Traduction</span></div>
+            <div class="actions"><a class="btn" href="https://github.com/WilliamVenner/gmpublisher" target="_blank" rel="noreferrer noopener">WilliamVenner/gmpublisher</a></div>
           </article>
-         
-          <!-- Exemple de carte avec les projets github -->
-          <!-- <article class="card reveal" data-tags="Python,CLI" aria-labelledby="p5">
-            <h3 id="p5">LogParser CLI</h3>
-            <p class="muted">Utilitaire Python pour trier/filtrer des logs Windows et générer un rapport.</p>
-            <div class="tags">
-              <span class="tag">Python</span><span class="tag">CLI</span>
-            </div>
-            <div class="actions">
-              <a class="btn" href="#" aria-disabled="true">Bientôt</a>
-            </div>
-          </article> -->
+
+          <article class="card reveal" aria-labelledby="c-exiled">
+            <h3 id="c-exiled">EXILED <span class="stars">★ 190</span></h3>
+            <p class="muted">Framework de plugins pour SCP:SL. Création du README français, puis corrections de traduction et de grammaire.</p>
+            <div class="tags"><span class="tag">C#</span><span class="tag">SCP:SL</span><span class="tag">Doc</span></div>
+            <div class="actions"><a class="btn" href="https://github.com/ExMod-Team/EXILED" target="_blank" rel="noreferrer noopener">ExMod-Team/EXILED</a></div>
+          </article>
+
+          <article class="card reveal" aria-labelledby="c-ucr">
+            <h3 id="c-ucr">UncomplicatedCustomRoles <span class="stars">★ 31</span></h3>
+            <p class="muted">Plugin et API de rôles custom pour LabAPI. Création du dossier de localisation et du README français, que je maintiens à jour (passage à LabAPI inclus).</p>
+            <div class="tags"><span class="tag">C#</span><span class="tag">SCP:SL</span><span class="tag">Doc</span></div>
+            <div class="actions"><a class="btn" href="https://github.com/UncomplicatedCustomServer/UncomplicatedCustomRoles" target="_blank" rel="noreferrer noopener">UncomplicatedCustomRoles</a></div>
+          </article>
+
+          <article class="card reveal" aria-labelledby="c-ae">
+            <h3 id="c-ae">AutoEvent <span class="stars">★ 27</span></h3>
+            <p class="muted">Plugin LabAPI de mini-jeux automatiques pour SCP:SL. Ajout et mise à jour de la traduction française.</p>
+            <div class="tags"><span class="tag">C#</span><span class="tag">SCP:SL</span><span class="tag">Traduction</span></div>
+            <div class="actions"><a class="btn" href="https://github.com/MedveMarci/AutoEvent" target="_blank" rel="noreferrer noopener">MedveMarci/AutoEvent</a></div>
+          </article>
+
+          <article class="card reveal" aria-labelledby="c-sls">
+            <h3 id="c-sls">sl-servers-frontend</h3>
+            <p class="muted">Site listant les serveurs SCP:SL. Amélioration de la qualité de la traduction française.</p>
+            <div class="tags"><span class="tag">JavaScript</span><span class="tag">Traduction</span></div>
+            <div class="actions"><a class="btn" href="https://github.com/horyu1234/sl-servers-frontend" target="_blank" rel="noreferrer noopener">horyu1234/sl-servers-frontend</a></div>
+          </article>
+
+          <article class="card reveal" aria-labelledby="c-belote">
+            <h3 id="c-belote">Belote en ligne</h3>
+            <p class="muted">Jeu de belote web. J'ai rendu la partie jouable et ajouté un fichier de réglages.</p>
+            <div class="tags"><span class="tag">HTML</span><span class="tag">JavaScript</span><span class="tag">Code</span></div>
+            <div class="actions"><a class="btn" href="https://github.com/imacnop/Belote-en-ligne" target="_blank" rel="noreferrer noopener">imacnop/Belote-en-ligne</a></div>
+          </article>
+
+          <article class="card reveal" aria-labelledby="c-misc">
+            <h3 id="c-misc">Et aussi…</h3>
+            <p class="muted">Traductions et corrections de README :</p>
+            <ul class="contrib-list">
+              <li><a href="https://github.com/Antoniofo/VoteKick" target="_blank" rel="noreferrer noopener">Antoniofo/VoteKick</a></li>
+              <li><a href="https://github.com/Antoniofo/ElevatorBC" target="_blank" rel="noreferrer noopener">Antoniofo/ElevatorBC</a></li>
+              <li><a href="https://github.com/Tronix28/WinTool-Box" target="_blank" rel="noreferrer noopener">Tronix28/WinTool-Box</a></li>
+              <li><a href="https://github.com/Kiwai-NL/Kiwai-NL_Wine" target="_blank" rel="noreferrer noopener">Kiwai-NL/Kiwai-NL_Wine</a></li>
+              <li><a href="https://github.com/Bankokwak/RaCustomMenu" target="_blank" rel="noreferrer noopener">Bankokwak/RaCustomMenu</a></li>
+              <li><a href="https://github.com/Bankokwak/JailRaSystem" target="_blank" rel="noreferrer noopener">Bankokwak/JailRaSystem</a></li>
+              <li><a href="https://github.com/BelgiansDev/.github" target="_blank" rel="noreferrer noopener">BelgiansDev/.github</a></li>
+            </ul>
+          </article>
         </div>
       </div>
     </section>
